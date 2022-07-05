@@ -23,13 +23,13 @@ function Clock() {
         <div className={styles.wrapper}>
             <div className={styles.border}>
             <div className={styles.clock}>
-                <div className={styles.number}>  {date.getHours().toLocaleString()}</div>
+                <div className={styles.number}>  {("0" + ((date).getHours())).slice(-2)}</div>
                 <div className={styles.number}>:</div>
-                <div className={styles.number}> {date.getMinutes().toLocaleString()}</div>
+                <div className={styles.number}> {("0" + ((date).getMinutes())).slice(-2)}</div>
                 <div className={styles.number}>:</div>
-                <div className={styles.number}>{date.getSeconds().toLocaleString()}</div>
+                <div className={styles.number}>{("0" + ((date).getSeconds())).slice(-2)}</div>
             </div>
-            <div className={styles.number}>{date.getDate()} {months[date.getMonth()]}  </div>
+            <div className={styles.number}>{("0" + ((date).getMonth() + 1)).slice(-2)} {months[date.getMonth()]}  </div>
         </div>
         </div>
     );
